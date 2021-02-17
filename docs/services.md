@@ -3,6 +3,10 @@ Services
 
 This is a public directory of all known public services made available through the CRXN inter-network.
 
+## DNS
+
+We have a DNS root nameserver at at **[fd8a:6111:3b1a:dddd::1]()**.
+
 ## Forums
 
 * [bruh forum](http://10.6.2.1/bruh)
