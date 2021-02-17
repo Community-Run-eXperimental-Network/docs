@@ -1,11 +1,18 @@
 Services
 ========
 
-This is a public directory of all known public services made available through the CRXN inter-network.
+This is a public directory of all known public services made available through the CRXN inter-network. Any domains listed here need resolution via the root server specified in the section below.
 
 ## DNS
 
 We have a DNS root nameserver at at **[fd8a:6111:3b1a:dddd::1]()**.
+
+## Git hosting
+
+There are various instances ranging from personal ones to public-use ones.
+
+* [http://git.redxen.crxn:80](http://git.redxen.crxn:80)
+* [git.redxen.crxn:2442]() - SSH access to above Git server
 
 ## Forums
 
