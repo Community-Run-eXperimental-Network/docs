@@ -52,6 +52,9 @@ There are various instances ranging from personal ones to public-use ones.
 	- IP: `fd8a:6111:3b1a:aaaa::3`
 	- Port: `80`
 	- DNS: `personal.deavmi.crxn`
+* Skiqqy's personal homepage and blog
+	- IP: `10.6.6.2`
+	- Port: `80`
 
 ## Diagnostics
 
