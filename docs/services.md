@@ -53,7 +53,7 @@ There are various instances ranging from personal ones to public-use ones.
 	- Port: `80`
 	- DNS: `personal.deavmi.crxn`
 * Skiqqy's personal homepage and blog
-	- IP: `10.6.6.2`
+	- IP: `10.6.6.1`
 	- Port: `80`
 
 ## Diagnostics
