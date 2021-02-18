@@ -28,4 +28,5 @@ There are various instances ranging from personal ones to public-use ones.
 * Deavmi's MumbleShack
 	- Vanilla mumble server
 	- IP: `10.0.0.2`
-	- Port: default
+	- DNS: `bester.deavmi.crxn`
+	- Port: 64738
