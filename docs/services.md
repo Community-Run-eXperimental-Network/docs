@@ -44,3 +44,11 @@ There are various instances ranging from personal ones to public-use ones.
 * redandblacks's Hastebin
  	- IP: `10.4.2.1`
  	- Port: `80`
+
+## Websites
+
+* Deavmi's personal homepage and blog
+	- IP: `10.1.0.2`
+	- IP: `fd8a:6111:3b1a:aaaa::3`
+	- Port: `80`
+	- DNS: `personal.deavmi.crxn`
