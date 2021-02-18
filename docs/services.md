@@ -35,3 +35,9 @@ There are various instances ranging from personal ones to public-use ones.
 	- IP: `fd8a:6111:3b1a:dddd::4`
 	- DNS: `arisu.falkenstein.hetzner.redxen.crxn`
 	- Port: `64738`
+
+## Pastebins
+
+* redandblacks's Hastebin
+ 	- IP: `10.4.2.1`
+ 	- Port: `80`
