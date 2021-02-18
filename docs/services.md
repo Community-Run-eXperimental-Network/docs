@@ -39,6 +39,16 @@ There are various instances ranging from personal ones to public-use ones.
 	- IP: `10.4.2.1`
 	- Port: `64738`
 
+## IRC
+
+* reddawn648's IRC server (BNET)
+	- IP: `10.6.4.1`
+	- Port: `6667`
+
+* Deavmi's lockdown.bnet IRC server (BNET)
+	- IP: `10.0.0.2`
+	- Port: `6667`
+
 ## Pastebins
 
 * redandblacks's Hastebin
