@@ -52,3 +52,12 @@ There are various instances ranging from personal ones to public-use ones.
 	- IP: `fd8a:6111:3b1a:aaaa::3`
 	- Port: `80`
 	- DNS: `personal.deavmi.crxn`
+
+## Diagnostics
+
+* BabelWeb
+	- IP: `10.1.0.2`
+	- IP: `fd8a:6111:3b1a:aaaa::3`
+	- Port: `4444`
+	- DNS: `personal.deavmi.crxn`
+
