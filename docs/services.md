@@ -29,8 +29,9 @@ There are various instances ranging from personal ones to public-use ones.
 	- Vanilla mumble server
 	- IP: `10.0.0.2`
 	- DNS: `bester.deavmi.crxn`
-	- Port: 64738
+	- Port: `64738`
 * RedXen's Mumble
 	- Customized Mumble server
 	- IP: `fd8a:6111:3b1a:dddd::4`
 	- DNS: `arisu.falkenstein.hetzner.redxen.crxn`
+	- Port: `64738`
