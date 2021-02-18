@@ -25,7 +25,7 @@ There are various instances ranging from personal ones to public-use ones.
 	
 ## VoIP
 
-* Deavmi's MumbleShack
+* Deavmi's MumbleShack Mumble
 	- Vanilla mumble server
 	- IP: `10.0.0.2`
 	- DNS: `bester.deavmi.crxn`
@@ -34,6 +34,9 @@ There are various instances ranging from personal ones to public-use ones.
 	- Customized Mumble server
 	- IP: `fd8a:6111:3b1a:dddd::4`
 	- DNS: `arisu.falkenstein.hetzner.redxen.crxn`
+	- Port: `64738`
+* redandblack's Mumble
+	- IP: `10.4.2.1`
 	- Port: `64738`
 
 ## Pastebins
