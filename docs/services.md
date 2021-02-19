@@ -65,6 +65,9 @@ There are various instances ranging from personal ones to public-use ones.
 * Skiqqy's personal homepage and blog
 	- IP: `10.6.6.1`
 	- Port: `80`
+* RedAndBlack's Gemini capsule
+	- IP: `10.4.2.1`
+	- Port: `1965`
 
 ## Diagnostics
 
