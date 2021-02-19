@@ -23,3 +23,13 @@ redistribute ip fd8a:6111:3b1a::/48 ge 48
 Now what you need to do is to find a `/56` available in the `fd8a:6111:3b1a::/48` range on Netbox, allocate it, and then a `/64` within said allocated subnet. It is this `/64` that we will be using for configuring your node for IPv6.
 
 You can register a prefix here and find a list of all prefixes [here](https://crxn.chrisnew.de/netbox/ipam/aggregates/8/) and allocate a new one [here](https://crxn.chrisnew.de/netbox/ipam/prefixes/add/).
+
+## Step 4: Add this subnet to your machine
+
+If you recall the `on up` part to your fastd configuration then you can put this code in there if you want. A systemd unit will do as well.
+
+```
+ip route add <subnet>/<prefix> proto static dev <interface>
+```
+
+You can make `<interface>` the interface the subnet belongs to, for example, `eth0`, if you intend to have your IPs within your subnet accessed from your router over the LAN it is conneted to on `eth0`.
