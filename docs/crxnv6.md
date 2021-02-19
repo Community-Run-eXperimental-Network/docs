@@ -9,7 +9,7 @@ Enable IPv6 on the interfaces you intend to run `babeld` on. I have no idea how 
 
 **TODO:** Can someone figure out
 
-## Step 2
+## Step 2: Configure babeld
 
 As with the previous tutorial on peering all you need to do is to have an interface line declared in your `/etc/babeld.conf`, nothing really changes just because you are doing IPv6. You will need to make sure you redistribute the following, so add this to your configuration:
 
@@ -17,3 +17,9 @@ As with the previous tutorial on peering all you need to do is to have an interf
 # Redistribute all CRXN (IPv6 - fd8a:6111:3b1a::/48)
 redistribute ip fd8a:6111:3b1a::/48 ge 48
 ```
+
+## Step 3: Allocate a subnet on Netbox
+
+Now what you need to do is to find a `/56` available in the `fd8a:6111:3b1a::/48` range on Netbox, allocate it, and then a `/64` within said allocated subnet. It is this `/64` that we will be using for configuring your node for IPv6.
+
+You can register a prefix here and find a list of all prefixes [here](https://crxn.chrisnew.de/netbox/ipam/aggregates/8/) and allocate a new one [here](https://crxn.chrisnew.de/netbox/ipam/prefixes/add/).
