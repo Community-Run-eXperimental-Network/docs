@@ -4,7 +4,8 @@ theme: yeti
 nav:
   - Home: index.md
   - Network:
-    - Tutorial: peering.md
+    - Tutorial:
+      - Peering: peering.md
       - CRXNv6: crxnv6.md
     - Nodes: peers.md
     - Services: services.md
