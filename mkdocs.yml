@@ -7,6 +7,8 @@ nav:
       - Peering: peering.md
       - CRXNv6: crxnv6.md
       - On-the-go: onthego.md
+      - Configs:
+        - Bird: configs/bird.md
   - Peers: peers.md
   - Services: services.md
   - Registrar: ipam.md
