@@ -1,7 +1,7 @@
 Bird configuration
 ==================
 
-Neil Alexander has provided his Bird config for those who want to run a CRXN router using enterprise software.
+Neil Alexander has provided his Bird config for those who want to run a CRXN router using enterprise software. Obviously there is a blacholed route, you won't want that and also the IP numbers must be changed to suit your configuration.
 
 ```bird
 filter crxn4 {
