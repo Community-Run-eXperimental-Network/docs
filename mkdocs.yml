@@ -6,6 +6,7 @@ nav:
   - Tutorial:
       - Peering: peering.md
       - CRXNv6: crxnv6.md
+      - On-the-go: onthego.md
   - Peers: peers.md
   - Services: services.md
   - Registrar: ipam.md
