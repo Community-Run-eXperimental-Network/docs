@@ -8,3 +8,12 @@ Getting IPv6 working on your router is actually easier than IPv4. This is becaus
 Enable IPv6 on the interfaces you intend to run `babeld` on. I have no idea how to do this, but by default it is enabled, atleast on Raspbian.
 
 **TODO:** Can someone figure out
+
+## Step 2
+
+As with the previous tutorial on peering all you need to do is to have an interface line declared in your `/etc/babeld.conf`, nothing really changes just because you are doing IPv6. You will need to make sure you redistribute the following, so add this to your configuration:
+
+```
+# Redistribute all CRXN (IPv6 - fd8a:6111:3b1a::/48)
+redistribute ip fd8a:6111:3b1a::/48 ge 48
+```
