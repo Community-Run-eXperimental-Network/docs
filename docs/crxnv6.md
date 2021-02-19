@@ -29,9 +29,17 @@ You can register a prefix here and find a list of all prefixes [here](https://cr
 If you recall the `on up` part to your fastd configuration then you can put this code in there if you want. A systemd unit will do as well.
 
 ```
-ip addr add <subnet>/<prefix> proto static dev <interface>
+ip route add <subnet>/<prefix> proto static dev <interface>
 ```
 
 You can make `<interface>` the interface the subnet belongs to, for example, `eth0`, if you intend to have your IPs within your subnet accessed from your router over the LAN it is conneted to on `eth0`.
 
-This above code should add a route for you AND assign the IP to the given interface.
+## Step 5: Add an address
+
+Set the address for your node with the following:
+
+```
+ip addr add <address>/<prefix> dev <interface>
+```
+
+The `<interface>` can be anything.
