@@ -22,10 +22,10 @@ There are various instances ranging from personal ones to public-use ones.
 
 ## Forums
 
-* [bruh forum](http://10.6.2.1/bruh)
+* [bruh forum](http://10.18.1.1/bruh)
 	- This is a 4chan-like imageboard (sans the images part)
 	- IP and Port: `10.6.2.1:80`
-* [crxn forum](http://10.6.2.1/crxn)
+* [crxn forum](http://10.18.1.1/crxn)
 	- This is the official CRXN forum
 	- IP and Port: `10.6.2.1:80`
 	
