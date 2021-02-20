@@ -35,3 +35,14 @@ ip addr add <address>/<prefix> dev <interface>
 You can make `<interface>` the interface the subnet belongs to, for example, `eth0`, if you intend to have your IPs within your subnet accessed from your router over the LAN it is conneted to on `eth0`.
 
 `ip addr` will also add a local route whne doing so (via `<interface>`). Obviously make sure `<address>` is within your chosen subnet.
+
+## Step 5: Configure your client access via your router
+
+Now choose your second IP from your range and run the following (this is an example where the router's IP is `fd8a:6111:3b1a:ab00::1` and the subnet allocated is `fd8a:6111:3b1a:ab00::/64` and also the client's IP is `fd8a:6111:3b1a:ab00::2`):
+
+```
+ip addr add fd8a:6111:3b1a:ab00::2/64 dev ethernetForExample
+ip route add fd8a:6111:3b1a::/48 dev ethernetForExample via fd8a:6111:3b1a:ab00::1
+```
+
+Where the router is on the ethernet LAN attached to interface `ethernetForExample`.
