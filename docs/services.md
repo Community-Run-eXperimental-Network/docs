@@ -24,10 +24,10 @@ There are various instances ranging from personal ones to public-use ones.
 
 * [bruh forum](http://10.18.1.1/bruh)
 	- This is a 4chan-like imageboard (sans the images part)
-	- IP and Port: `10.6.2.1:80`
+	- IP and Port: `10.18.1.1:80`
 * [crxn forum](http://10.18.1.1/crxn)
 	- This is the official CRXN forum
-	- IP and Port: `10.6.2.1:80`
+	- IP and Port: `10.18.1.1:80`
 * Bunker Chan
 	- IP: `10.4.2.1`
 	- IP: `fd8a:6111:3b1a:ab00::1`
