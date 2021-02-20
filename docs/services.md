@@ -47,6 +47,7 @@ There are various instances ranging from personal ones to public-use ones.
 	- Port: `64738`
 * redandblack's Mumble
 	- IP: `10.4.2.1`
+	- IP: `fd8a:6111:3b1a:ab00::1`
 	- Port: `64738`
 
 ## IRC
@@ -65,6 +66,7 @@ There are various instances ranging from personal ones to public-use ones.
 
 * redandblacks's Hastebin
  	- IP: `10.4.2.1`
+ 	- IP: `fd8a:6111:3b1a:ab00::1`
  	- Port: `80`
 
 ## Websites
@@ -79,6 +81,7 @@ There are various instances ranging from personal ones to public-use ones.
 	- Port: `80`
 * RedAndBlack's Gemini capsule
 	- IP: `10.4.2.1`
+	- IP: `fd8a:6111:3b1a:ab00::1`
 	- Port: `1965`
 * Meme Site (Imagine 9GAG + IPFS)
  	- IP: `10.18.1.7`
