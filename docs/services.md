@@ -44,10 +44,12 @@ There are various instances ranging from personal ones to public-use ones.
 * reddawn648's IRC server (BNET)
 	- IP: `10.6.4.1`
 	- Port: `6667`
-
 * Deavmi's lockdown.bnet IRC server (BNET)
 	- IP: `10.0.0.2`
 	- Port: `6667`
+* Skiqqy's IRC server (BNET)
+	- IP: `10.6.6.1`
+	- POrt: `6667`
 
 ## Pastebins
 
@@ -68,6 +70,9 @@ There are various instances ranging from personal ones to public-use ones.
 * RedAndBlack's Gemini capsule
 	- IP: `10.4.2.1`
 	- Port: `1965`
+* Meme Site (Imagine 9GAG + IPFS)
+ 	- IP: `10.18.1.7`
+ 	- Port: `80`
 
 ## Diagnostics
 
