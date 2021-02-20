@@ -24,7 +24,7 @@ mediums or routing daemon you choose to use is up to you - this falls in line wi
 The subnets that we use so far are the below private ranges.
 
 * For **IPv4** we are running on the `10.0.0.0/8` range.
-* For **IPv6** we are running on the `fd00::/8` range.
+* For **IPv6** we are running on the `fd8a:6111:3b1a::/48` range.
 
 IPv4 note: If we run out we will simply use more private ranges but we will keep out the `192.168.0.0/16` range such that home networks (sane ones) will not have any clashes.
 
