@@ -11,8 +11,14 @@ We have a DNS root nameserver at at **[fd8a:6111:3b1a:dddd::1]()**.
 
 There are various instances ranging from personal ones to public-use ones.
 
-* [http://git.redxen.crxn:80](http://git.redxen.crxn:80)
+* RedXen's Gitea
+	- [http://git.redxen.crxn:80](http://git.redxen.crxn:80)
+	- DNS: `git.redxen.crxn`
 * [git.redxen.crxn:2442]() - SSH access to above Git server
+* Deavmi's Gitea
+	- IP: `10.0.0.8`
+	- Port: `3000`
+	- DNS: `silverfish.community.deavmi.crxn`
 
 ## Forums
 
@@ -81,4 +87,11 @@ There are various instances ranging from personal ones to public-use ones.
 	- IP: `fd8a:6111:3b1a:aaaa::3`
 	- Port: `4444`
 	- DNS: `personal.deavmi.crxn`
+
+## Gaming
+
+* Xonotic Server
+	- IP: `fd8a:6111:3b1a:dddd::1`
+	- DNS: `xonotic.redxen.crxn`
+	- Port: `26000`
 
