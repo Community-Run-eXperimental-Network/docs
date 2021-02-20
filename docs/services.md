@@ -28,6 +28,10 @@ There are various instances ranging from personal ones to public-use ones.
 * [crxn forum](http://10.18.1.1/crxn)
 	- This is the official CRXN forum
 	- IP and Port: `10.6.2.1:80`
+* Bunker Chan
+	- IP: `10.4.2.1`
+	- IP: `fd8a:6111:3b1a:ab00::1`
+	- Port: `8080`
 	
 ## VoIP
 
