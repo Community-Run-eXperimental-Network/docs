@@ -114,8 +114,14 @@ You will want to add the following lines to your `/etc/babeld.conf`:
 # Redistribute all CRXN (10/8) routes
 redistribute ip 10.0.0.0/8 ge 8
 
+# Only learn routes in the CRXN (10/8) range
+in ip 10.0.0.0/8 ge 8 allow
+
 # Redistribute all CRXN (IPv6 - fd8a:6111:3b1a::/48)
 redistribute ip fd8a:6111:3b1a::/48 ge 48
+
+# Only learn routes in the CRXN (fd8a:6111:3b1a::/48) range
+in ip fd8a:6111:3b1a::/48 ge 48 allow
 ```
 
 This will redistribute routes from your kernel's routing table that match the subnets described (CRXN IPv4 `10/8` and IPv6 `fd00::/8`) into babel's internal routing table which will then be exported to neighbouring babel routers. Babel will learn any routes that are distributed into it (**TODO**: We could filter here too, with `in`).
