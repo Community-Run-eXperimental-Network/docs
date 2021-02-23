@@ -122,10 +122,11 @@ in ip 0.0.0.0/0	ge 0 deny
 redistribute ip fd8a:6111:3b1a::/48 ge 48
 
 # Only learn routes in the CRXN (fd8a:6111:3b1a::/48) range
-in ip fd8a:6111:3b1a::/48 ge 48 allow
+in ip fd8a:6111:3b1a::/48 ge 48	allow
+in ip ::/0 ge 0 deny
 ```
 
-This will redistribute routes from your kernel's routing table that match the subnets described (CRXN IPv4 `10/8` and IPv6 `fd00::/8`) into babel's internal routing table which will then be exported to neighbouring babel routers. Babel will learn any routes that are distributed into it (**TODO**: We could filter here too, with `in`).
+This will redistribute routes from your kernel's routing table that match the subnets described (CRXN IPv4 `10/8` and IPv6 `fd8a:6111:3b1a::/48`) into babel's internal routing table which will then be exported to neighbouring babel routers. Babel will learn any routes that are distributed into it (**TODO**: We could filter here too, with `in`, we do this, remove this).
 
 The next line you will add is to not redistribute your own host address as a route (because a subnet being redistributed would catch that), therefore add the following line:
 
