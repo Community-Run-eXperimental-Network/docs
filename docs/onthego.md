@@ -19,4 +19,4 @@ Endpoint=168.119.99.213:51820
 
 You just need to fill in your `<private key>`, `<ipv4 address>` and `<ipv6 address>`.
 
-Contact [caskd@redxen.eu](mailto:caskd@redxen.eu) to request a connection.
+Contact [caskd@redxen.eu](mailto:caskd@redxen.eu) to request a connection (remember to send a public key and also a reason (optional) for your connection).
