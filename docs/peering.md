@@ -116,6 +116,7 @@ redistribute ip 10.0.0.0/8 ge 8
 
 # Only learn routes in the CRXN (10/8) range
 in ip 10.0.0.0/8 ge 8 allow
+in ip 0.0.0.0/0	ge 0 deny
 
 # Redistribute all CRXN (IPv6 - fd8a:6111:3b1a::/48)
 redistribute ip fd8a:6111:3b1a::/48 ge 48
