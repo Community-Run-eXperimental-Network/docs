@@ -96,17 +96,9 @@ There are various instances ranging from personal ones to public-use ones.
 * Skiqqy's personal homepage and blog
 	- IP: `10.6.6.1`
 	- Port: `80`
-* redandblack's Gemini capsule
-	- IP: `10.4.2.1`
-	- IP: `fd8a:6111:3b1a:ab00::1`
-	- Port: `1965`
 * Meme Site (Imagine 9GAG + IPFS)
  	- IP: `10.18.1.7`
  	- Port: `80`
-* redandblack's Icecast Server(Lo-Fi Music)
-	- IP: `10.4.2.1`
-	- IP: `fd8a:6111:3b1a:ab00::1`
-	- Port: `8000`
 
 ## Diagnostics
 
@@ -126,7 +118,3 @@ There are various instances ranging from personal ones to public-use ones.
 	- IP: `10.4.2.1`
 	- IP: `fd8a:6111:3b1a:ab00::1`
 	- Port: `30000`
-* [among-sus](https://sr.ht/~martijnbraam/among-sus/) Server
-	- IP: `10.4.2.1`
-	- IP: `fd8a:6111:3b1a:ab00::1`
-	- Port: `1234`
