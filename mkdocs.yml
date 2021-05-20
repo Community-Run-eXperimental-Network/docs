@@ -6,6 +6,14 @@ nav:
   - Getting started:
       - Guide: getting-started.md
       - Rules: rules.md
+      - Requirements: requirements.md
+      - Assigning subnet: prefixes.md
+      - Routing:
+         - Introduction: routing.md
+         - Bird-based routing:
+            - Basics: bird_basics.md
+         - Babeld-based routing
+         - Mikrotik-based routing
   - Tutorial:
       - Peering: peering.md
       - CRXNv6: crxnv6.md
