@@ -63,6 +63,9 @@ The configuration template is constructed out of the following files:
 	* It also contains the needed protocol definitions to sync bird
 	routes into the Linux kernel's routing table (so you cna forward
 	packets based on the routes from Bird)
+5. `protocols.conf`
+	* Depending on what protocol you want to use this will contains
+	configurations for each
 
 #### `filters.conf`
 
@@ -172,11 +175,13 @@ doesn't even need those, it gets them from the interface.
 # directly attached networks - i.e. nexthop = 0.0.0.0)
 protocol direct crxnDirect {
 
+		# Import from direct -> bird into bird's `crxn` table
         import filter crxn6;
         table crxn;
 
+		# Only doing this so it shows by default in looking glass
         import filter crxn6;
-        table master; #Only doing this so it shows by default in looking glass
+        table master;
 }
 ```
 
@@ -192,10 +197,25 @@ TODO: Check, defualt `learn` should larn non `kernel` and non-`bird` routes
 # could be `proto static` for example. By default it will learn these.
 # Of course we also then export all routes from our Bird tables into the kernel so you can actually forward packets
 protocol kernel crxnKernel {
-                import filter crxn6;
-                export filter crxn6;
 
+				# Export from bird -> kernel from bird's `crxn` table
+                export filter crxn6;
                 table crxn;
-                table master; #Only doing this so it shows by default in looking glass
+
+                # Only doing this so it shows by default in looking glass
+                import filter crxn6;
+                table master; 
 }
 ```
+
+#### `protocols.conf`
+
+This file should look like this (as an example of running one `babel`
+instance and one `ospf` instance):
+
+```
+# Import protocol instances
+import "babel.conf";
+import "ospf.conf";
+```
+
