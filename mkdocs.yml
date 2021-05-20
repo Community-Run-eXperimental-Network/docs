@@ -12,6 +12,7 @@ nav:
          - Introduction: routing.md
          - Bird-based routing:
             - Basics: bird_basics.md
+            - Configuration: bird_config.md
          - Babeld-based routing
          - Mikrotik-based routing
   - Tutorial:
