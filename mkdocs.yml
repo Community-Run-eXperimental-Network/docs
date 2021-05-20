@@ -3,6 +3,9 @@ theme: yeti
 
 nav:
   - Home: index.md
+  - Getting started:
+      - Guide: getting-started.md
+      - Rules: rules.md
   - Tutorial:
       - Peering: peering.md
       - CRXNv6: crxnv6.md
@@ -12,3 +15,4 @@ nav:
   - Peers: peers.md
   - Services: services.md
   - Registrar: ipam.md
+  - People: peopel.md

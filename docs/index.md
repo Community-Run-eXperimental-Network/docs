@@ -2,13 +2,59 @@
 
 <br>
 
-CRXN stands for **C**ommunity **R**un e**X**pansive **N**etwork. It's a computer network run by the _community for the community_.
-We are a dual-stack IP-based network supporting both IPv4 and IPv6. We are focused on having a network that is accessible to all,
-reliable in terms of having redundant links and diverse. The first part means that we are welcome to anyone who wants to join, the
-second part means that we focus on having a lot of links between adjacent routers such that if one is to fail there exists a fallback
-(in the case where the route is only available through said router - if there are more routers then this is mitigated). We also strive
-to have diverse links - this means linking over the Internet whether it be clearnet or via an overlay network such as Yggdrasil or CJDNS
-or in the best case creating physical links.
+ CRXN
+======
+
+CRXN stands for **C**ommunity **R**un e**X**pansive **N**etwork. It's a computer network _run by the community for the community_.
+We provide an IPv6 (that's the freshest Internet Protocol out there to date) and on CRXN anything that can speak IPv6
+will be able to function correctly - a network without borders! We are focused with having a network that really focuses
+on the "end-to-end" principal of IP - that is to say that if you want to run something and make it available to other then
+you won't have to worry about NAT-traversal, port fowarding, lack of raw IP support and all the other non-sense that IPv4
+created (due to lack of addresses). Compared to the clearnet (normal Internet) there isn't much fuss involved around getting
+a network ID assigned to you and so forth, we truly are for the community and all our members take some of their own time
+to work on their network and the greater CRXN inter-network as a whole.
+
+It's a great place to test out new protocols, networking projects, play games, exchange ideas and learn about networking,
+routing and network sub-systems themselves. You also get to learn how CRXN is put toghether which is a great way to learn
+networking with those that run networks already themselves.
+
+The network has a few goals that we always want to maintain as to not lose our allure:
+
+1. Be a network for learning
+	* We don't want to shun people away from using some new
+	routing protocol as it might be cool and interesting to
+	learn
+2. Be reliable
+	* Of course when learning people should also make sure
+	their routers don't just accept any route without making
+	sure its valid - hence network operators should make sure
+	their networks operate even when some are causing mayhem
+	(malicious or learning by trial and error)
+	* Also shouldn't be painfully slow
+3. Diverse routing
+	* We want to try out protocols like **ospf**, **babel**, **bgp**
+	and so on and so forth
+	* We want to build a network out of a mix and match of these all
+	working in harmony toghether
+	* Monocultures suck!
+4. Usable
+	* We have DNS, we have voice chat servers and we have IRC (we
+	even have gaming!) but we can always do with much **much more**!
+	* We want the users, _you_, to make the network usable for your
+	needs - who knows it might provide a service that helps out
+	someone else
+5. Peering
+	* We want people to setup redundant links using whatever protocols
+	they want, be it **wireguard**, **GRE**, **fastd** etc.
+	* We want there to be interesting links and diversity
+6. _Chaos and Order_
+	* The network should never stop experimenting
+	* But it should have 99% uptime and safety fallbacks
+	* If you want to experiment - then go ahead and try cuase
+	as little disruption as possible
+	* If you run a node - make it secure - sign routes etc.
+	to prevent others from experimenting from messing your
+	network up
 
 We aim to create a more open Internet available to everyone and a place to learn about IP routing and networking in general.
 
@@ -19,28 +65,43 @@ mediums or routing daemon you choose to use is up to you - this falls in line wi
 
 ## About the network
 
-### Ranges
+### IPv6 Ranges
 
-The subnets that we use so far are the below private ranges.
+Aggregate prefixes are organized as /48 IPv6 ULAs by region:
 
-* For **IPv4** we are running on the `10.0.0.0/8` range.
-* For **IPv6** we are running on the `fd8a:6111:3b1a::/48` range.
+1. European CRXN
+	* Space: `fd8a:6111:3b1a::/48`
+2. Southern African CRXN
+	* Space: `fded:4178:23fe::/48`
+3. Indian CRXN
+	* Space: `fdfa:1685:3d1::/48`
+4. Russian CRXN
+	* Space: `fda1:8885:300d::/48`
+5. American CRXN
+	* Space: `fd68:b488:442c::/48`
 
-IPv4 note: If we run out we will simply use more private ranges but we will keep out the `192.168.0.0/16` range such that home networks (sane ones) will not have any clashes.
+The regional range sare not fixed in the sense that, for example, you could
+register a range in the Southern African range whilst your network is actaully
+physically located in Europe. We only do this to organize the network more
+easily.
 
 ### The state of the network
 
 ![CRXN babelweb map](map.png)
 
-The network is currently at a mere ~10 nodes with a few services being run over the network such as Mumble and NFS. The only routing
-daemon being used at this moment is babel and for tunnelling we are using fastd to establish VPN connections at an L2 layer between sites.
+The network is currently made up of around ~10 nodes so far with a few services running on
+the network, such as Mumble, [BonoboNET](/projects/bonobonet) (IRC), gaming (Xonotic, Minetest)
+and a few websites. We even have DNS which can resolve `.crxn` domains (find out more about that here (TODO).)
 
-In terms of transit we run fastd over clearnet, Yggdrasil and CJDNS.
+You can see the looking glass here (TODO).
 
-You can view the babel part of the network on the [live router map](http://deavmi.assigned.network:4444).
+You can also see a live map of the subset of users who are only running
+the original babel routing software, _babeld_, here, on the [live router map](http://deavmi.assigned.network:4444).
 
 ## Getting started
 
 ### Joining the network
 
-There is a tutorial (which is done for the most part) [here](peering.md) which will help you get connected onto the inter-network.
+Does it sound interesting enough for you already? Want to get connected? Then head on over
+to our [Getting started] section where you can find all the guides you need in order to get connected,
+follow the rules and have fun!
