@@ -57,6 +57,12 @@ The configuration template is constructed out of the following files:
 2. `networks.conf` (TODO: Add at a later stage)
 3. `tables.conf`
 	* The table definitions
+4. `router.conf`
+	* This contains the needed protocol definition for discovering
+	your interface's prefixes and generating routes form them
+	* It also contains the needed protocol definitions to sync bird
+	routes into the Linux kernel's routing table (so you cna forward
+	packets based on the routes from Bird)
 
 #### `filters.conf`
 
@@ -149,3 +155,47 @@ table crxn;
 table master;
 ```
 
+#### `router.conf`
+
+This contains an instance of the `direct` protocol which reads the address
+and prefix assigned to your AF_INET6 interfaces and generates routes from
+those that represent routes to directly atrtached networks those interfaces
+are on. The reason for this is that the `kernel` protocol never learns routes
+in the Linux kernel's routing table that have the `kernel` protocol which
+is what you get when you assign interfaces addresses and prefixes. This
+doesn't even need those, it gets them from the interface.
+
+```
+# The kernel protocol doesn't grab kernel routes that are added by you when you assign an
+# address and prefix. So instead of reading this from all routes with `proto kernel` this just
+# yeets the routes off of the interface structure itself (even if you didn't have a route for your
+# directly attached networks - i.e. nexthop = 0.0.0.0)
+protocol direct crxnDirect {
+
+        import filter crxn6;
+        table crxn;
+
+        import filter crxn6;
+        table master; #Only doing this so it shows by default in looking glass
+}
+```
+
+The second part is for syncing routes from Bird to the Linux kernels' routing
+table such that you can forward traffic then absed on the routes learnt from
+Bird.
+
+TODO: Check, defualt `learn` should larn non `kernel` and non-`bird` routes
+
+```
+# CRXN Kernel protocol
+# We import any routes from the kernel table other than `proto bird` and `proto kernel`,
+# could be `proto static` for example. By default it will learn these.
+# Of course we also then export all routes from our Bird tables into the kernel so you can actually forward packets
+protocol kernel crxnKernel {
+                import filter crxn6;
+                export filter crxn6;
+
+                table crxn;
+                table master; #Only doing this so it shows by default in looking glass
+}
+```
