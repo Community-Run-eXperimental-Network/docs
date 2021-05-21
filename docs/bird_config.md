@@ -98,36 +98,15 @@ ip inPrefixMasked;
                 return false;
 }
 
-# CRXN Route filter based on regions
+# CRXN Route filter based
 filter crxn6
 {
-        # Allowed ranges (CRXN ranges)
-        # European CRXN: fd8a:6111:3b1a::/48
-        # Souther African CRXN: fded:4178:23fe::/48
-        # Indian: fdfa:1685:3d1::/48
-        # Russian: fda1:8885:300d::/48
-        # American: fd68:b488:442c::/48
-        # Freeloader's IPv6: 2a04:5b81:2050::/44
-        if (rangeCheck(net, fd8a:6111:3b1a::/48) = true)
+		# CRXN v6 range
+        if (rangeCheck(net, fd00::/8) = true)
         then
                 accept;
 
-        if (rangeCheck(net, fded:4178:23fe::/48) = true)
-        then
-                accept;
-
-        if (rangeCheck(net, fdfa:1685:3d1::/48) = true)
-        then
-                accept;
-
-        if (rangeCheck(net, fda1:8885:300d::/48) = true)
-        then
-                accept;
-
-        if (rangeCheck(net, fd68:b488:442c::/48) = true)
-        then
-                accept;
-
+		# Freeloader's range
         if (rangeCheck(net, 2a04:5b81:2050::/44) = true)
         then
                 accept;
