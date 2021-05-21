@@ -2,8 +2,8 @@
 
 <br>
 
- CRXN
-======
+CRXN
+====
 
 CRXN stands for **C**ommunity **R**un e**X**pansive **N**etwork. It's a computer network _run by the community for the community_.
 We provide an IPv6 (that's the freshest Internet Protocol out there to date) and on CRXN anything that can speak IPv6
