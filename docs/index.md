@@ -65,25 +65,23 @@ mediums or routing daemon you choose to use is up to you - this falls in line wi
 
 ## About the network
 
-### IPv6 Ranges
+A few details about the network.
 
-Aggregate prefixes are organized as /48 IPv6 ULAs by region:
+### Protocol support
 
-1. European CRXN
-	* Space: `fd8a:6111:3b1a::/48`
-2. Southern African CRXN
-	* Space: `fded:4178:23fe::/48`
-3. Indian CRXN
-	* Space: `fdfa:1685:3d1::/48`
-4. Russian CRXN
-	* Space: `fda1:8885:300d::/48`
-5. American CRXN
-	* Space: `fd68:b488:442c::/48`
+We only use IPv6 on CRXN because it has many features, such as link-local addresses, that make
+setting up dynamic routing protocols near-zero-config.
 
-The regional range sare not fixed in the sense that, for example, you could
-register a range in the Southern African range whilst your network is actaully
-physically located in Europe. We only do this to organize the network more
-easily.
+It's also the modern way of the Internet and means you will get a large space of addresses
+assigned to you.
+
+### The range
+
+The IPv6 range we use is the private range of `fd00::/8`.
+
+### Assignments
+
+Users get allocated a `/48` IPv6 ULA within the `fd00::/8` range (by definition).
 
 ### The state of the network
 
