@@ -81,7 +81,11 @@ The IPv6 range we use is the private range of `fd00::/8`.
 
 ### Assignments
 
-Users get allocated a `/48` IPv6 ULA within the `fd00::/8` range (by definition).
+Users get allocated a `/48` (like `fdd2:cbf2:61bd::/48`) IPv6 ULA within the `fd00::/8` range (by definition).
+
+We have a Netbox [instance](https://crxn.chrisnew.de/netbox) where we register all the ULAs in.
+
+We also recommend you register your ULA on the global ULA registry at [ungleich](https://ula.ungleich.ch/).
 
 ### The state of the network
 
