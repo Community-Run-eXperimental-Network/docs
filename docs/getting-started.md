@@ -15,12 +15,12 @@ and configuration details needed to get connected!
 	* TODO: Check again and finalise
 	* We have **few** but **strict** rules nonetheless
 	* Zero-tolerance for breaking them
-2. Requirements
+2. [Requirements](requirements.md)
 	* TODO: Hardware, software, network connections
 3. Assigning subnet
 	* TODO: IPs etc
 	* TODO: RPKI?
-4. Setting up routing
+4. [Setting up routing](routing.md)
 	1. Setting up Bird
 		* TODO: Filtering etc
 		* TODO: Config
