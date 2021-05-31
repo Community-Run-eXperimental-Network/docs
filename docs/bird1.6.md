@@ -58,7 +58,7 @@ ip inPrefixMasked;
 # CRXN Route filter based
 filter crxn6
 {
-		# CRXN v6 range
+        # CRXN v6 range
         if (rangeCheck(net, fd00::/8) = true)
         then
                 accept;
@@ -67,8 +67,6 @@ filter crxn6
         if (rangeCheck(net, 2a04:5b81:2050::/44) = true)
         then
                 accept;
-
-
 
         # No matches, reject
         reject;
@@ -86,12 +84,6 @@ It is meant to have the same routes as the `crxn` table.
 ```
 # CRXN table
 table crxn;
-
-# master table
-
-# This is the default table, I only use this as the looking glass defaults to looking at it
-
-table master;
 ```
 
 #### `router.conf`
@@ -111,13 +103,9 @@ doesn't even need those, it gets them from the interface.
 # directly attached networks - i.e. nexthop = 0.0.0.0)
 protocol direct crxnDirect {
 
-		# Import from direct -> bird into bird's `crxn` table
+	# Import from direct -> bird into bird's `crxn` table
         import filter crxn6;
         table crxn;
-
-		# Only doing this so it shows by default in looking glass
-        import filter crxn6;
-        table master;
 }
 ```
 
@@ -134,13 +122,9 @@ TODO: Check, defualt `learn` should larn non `kernel` and non-`bird` routes
 # Of course we also then export all routes from our Bird tables into the kernel so you can actually forward packets
 protocol kernel crxnKernel {
 
-				# Export from bird -> kernel from bird's `crxn` table
-                export filter crxn6;
-                table crxn;
-
-                # Only doing this so it shows by default in looking glass
-                import filter crxn6;
-                table master; 
+	# Export from bird -> kernel from bird's `crxn` table
+        export filter crxn6;
+        table crxn;
 }
 ```
 

@@ -68,8 +68,6 @@ filter crxn6
         then
                 accept;
 
-
-
         # No matches, reject
         reject;
 }
@@ -86,12 +84,6 @@ It is meant to have the same routes as the `crxn` table.
 ```
 # CRXN table
 ipv6 table crxn;
-
-# master table
-
-# This is the default table, I only use this as the looking glass defaults to looking at it
-
-ipv6 table master;
 ```
 
 #### `router.conf`
@@ -115,11 +107,7 @@ protocol direct crxnDirect {
                 # Import from direct -> bird into bird's `crxn` table
                 import filter crxn6;
                 table crxn;
-
-                # Only doing this so it shows by default in looking glass
-                import filter crxn6;
-                table master;
-        }
+        };
 }
 ```
 
@@ -139,11 +127,7 @@ protocol kernel crxnKernel {
         	# Export from bird -> kernel from bird's `crxn` table
                 export filter crxn6;
                 table crxn;
-
-                # Only doing this so it shows by default in looking glass
-                import filter crxn6;
-                table master; 
-        }
+        };
 }
 ```
 
