@@ -1,5 +1,5 @@
-Bird: Babel configuration
-=========================
+Bird Babel configuration
+========================
 
 In a file named `babel.conf` place the following template:
 
@@ -16,11 +16,7 @@ protocol babel crxnBabel
         import filter crxn6;
         export filter crxn6;
         table crxn;
-
-		# Only doing this so it shows by default in looking glass
-        import filter crxn6;
-        table master; 
-    }
+    };
 }
 ```
 
@@ -28,7 +24,7 @@ protocol babel crxnBabel
 protocol to run on
 	* It also supports regex in a string so you can do `"interface*"` for example
 
-**Note:** For Bird 1.6 you will want to remove the `ipv6 {}`.
+**Note:** For Bird 1.6 you will want to remove the `ipv6 {};`.
 
 And that is all!
 
