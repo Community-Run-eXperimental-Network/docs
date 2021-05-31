@@ -23,6 +23,8 @@ and configuration details needed to get connected!
 	* TODO: RPKI?
 4. [Setting up routing](routing.md)
 	1. Setting up Bird
+		* [Bird 1.6](bird1.6.md)
+		* [Bird 2.0](bird2.md)
 		* TODO: Filtering etc
 		* TODO: Config
 		* TODO: Scripting
