@@ -9,19 +9,19 @@ We highly recommend you register a new `/48` ULA on the [Ungleich ULA registry](
 
 Firstly register a new account with them and you should see the homepage as follows then:
 
-![](/img/prefix_registration/homepage_ungleich.png)
+![](img/prefix_registration/homepage_ungleich.png)
 
 Then go to the "Register random prefix" section:
 
-![](/img/prefix_registration/register_ungleich.png)
+![](img/prefix_registration/register_ungleich.png)
 
 On this page fill in the fields, for the `URL` field put `http://deavmi.assigned.network/projects/crxn`. As for the `Organization` set that to `CRXN` and then for the `Network` section set that to be whatever you want to name your network (remember this as we will need it later).
 
-![](/img/prefix_registration/prefix_page_ungleich.png)
+![](img/prefix_registration/prefix_page_ungleich.png)
 
 After filling this in then hit submit and you should see a blue pop up with your allocation, save this, this is **very important**.
 
-![](/img/prefix_registration/generated_prefix.png)
+![](img/prefix_registration/generated_prefix.png)
 
 Now you have successfully allocated yourself a /48 ULA on Ungliech, `fd40:ec65:5b4c::/48`, next we will register it on the CRXN registry.
 
