@@ -18,6 +18,7 @@ and configuration details needed to get connected!
 2. [Requirements](requirements.md)
 	* TODO: Hardware, software, network connections
 3. Assigning subnet
+	* [Registering a new /48 ULA](register_ula.md)
 	* TODO: IPs etc
 	* TODO: RPKI?
 4. [Setting up routing](routing.md)
