@@ -33,3 +33,10 @@ sys.net.ipv6.conf.all.forwarding=1
 ```
 
 TODO: Weird experience with me, only doing `all` made it work
+
+## Assigning the /64
+
+Normally people will assign the a `/64` out of their `/48`. Assign this to the interface of the LAN you want your router on.
+
+A good IP choice for the router would be either `xxxx::1` or `xxxx::` so people can easily guess what to ping to test reachability
+to your network.
