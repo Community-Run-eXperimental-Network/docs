@@ -41,8 +41,7 @@ and configuration details needed to get connected!
 		2. Automatically with SLAAC and radv
 			1. [Setting up radv (router)](radv.md)
 			2. [Setting up SLAAC (hosts)](slaac/slaac.md)
-	* TODO: COnfiguring hosts
-	* TODO: Dns
+	* [CRXN DNS](dns/dns.md)
 
 ## What's next?
 
