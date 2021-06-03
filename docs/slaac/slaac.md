@@ -35,4 +35,4 @@ What you want to do now is to open `nmtui` (in your terminal) and reactivate tha
 
 Now reactivate the connection. You can do this by deactivating it and activating it again (unplugging and replugging won't reactivate it - it doesn't reload the profile).
 
-![]()
+![](slaac/connection_reactivate.png)
