@@ -14,3 +14,13 @@ Roles: EntityDB, Documentation, Outreach, Network services
 E-mail: `deavmi@redxen.eu`
 BNET IRC: `deavmi` (preferred)
 Matrix: `deavmi@matrix.org`
+
+## Rany `rany`
+
+Adminstration and massive helping hand.
+
+Roles: EntityDB, Network services
+
+E-mail: `ranycrxn@riseup.net`
+BNET IRC: `rany`
+Matrix: `@rany:fairydust.space`
