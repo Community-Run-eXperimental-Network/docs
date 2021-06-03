@@ -19,19 +19,15 @@ Then go to the `IPv6` tab and you should see this:
 
 Now make sure that this part is set to `Automatic`:
 
-![]()
+![](slaac/address_acquisition_automatic.png)
 
-And then for the bottom two parts you can choose whatever option you want in this drop down:
+And then for the bottom two parts you can choose whatever option you want in these dropdowns:
 
-![]()
-
-And this drop down:
-
-![]()
+![](slaac/whatever_you_want.png)
 
 Once you have configured that, then hit save and close all those windows:
 
-![]()
+![](slaac/save_connection.png)
 
 What you want to do now is to open `nmtui` (in your terminal) and reactivate that connection, first go to _Activate a connection_:
 
