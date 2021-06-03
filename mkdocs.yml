@@ -7,14 +7,19 @@ nav:
       - Guide: getting-started.md
       - Rules: rules.md
       - Requirements: requirements.md
+      - Registration:
+         - Registering a new /48 ULA: register_ula.md
+         - Adding your prefix to EntityDB: entitydb.md
       - Assigning subnet: prefixes.md
       - Routing:
-         - Introduction: routing.md
-         - Bird-based routing:
-            - Basics: bird_basics.md
-            - Configuration: bird_config.md
-         - Babeld-based routing
-         - Mikrotik-based routing
+         - Setting up Bird:
+            - Bird basics: bird_basics.md
+            - Bird configuration:
+               - Bird 1.6: bird1.6.md
+               - Bird 2: bird2.md
+            - Protocols:
+               - Babel: bird_babel.md
+               - OSPFv3: bird_ospfv3.md
   - Tutorial:
       - Peering: peering.md
       - CRXNv6: crxnv6.md

@@ -26,16 +26,13 @@ and configuration details needed to get connected!
 		2. Bird configuration
 			1. [Bird 1.6](bird1.6.md)
 			2. [Bird 2.0](bird2.md)
-		3. Setting up lg_proxy
-			* TODO: Setting up lg_proxy
-	2. Setting up Mikrotik
-		* TODO: Add tutorial
-5. General monitoring
-	* TODO: Optional, not required and tutorial does not exist yet
-6. [Tunneling](tunneling.md) TODO: Finish this
+			3. Protocols
+				1. [Babel](bird_babel.md)
+				2. [OSPFv3](bird_ospfv3.md)
+5. [Tunneling](tunneling.md) TODO: Finish this
 	* TODO: Setup tunnel(s)
 	* TODO: Fastd config
-7. Setting up your home network
+6. Setting up your home network
 	* [Configuring your hosts]
 		1. Statically (TODO)
 		2. Automatically with SLAAC and radv
