@@ -11,7 +11,8 @@ The configuration template is constructed out of the following files:
 
 1. `filters.conf`
 	* Filter functions and the filter itself
-2. `networks.conf` (TODO: Add at a later stage)
+2. `networks.conf`
+        * Advertisement of ULA
 3. `tables.conf`
 	* The table definitions
 4. `router.conf`
