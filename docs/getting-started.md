@@ -12,7 +12,6 @@ practices and inner-workings and by the end you should have all the information
 and configuration details needed to get connected!
 
 1. [Rules](rules.md)
-	* TODO: Check again and finalise
 	* We have **few** but **strict** rules nonetheless
 	* Zero-tolerance for breaking them
 2. [Requirements](requirements.md)

@@ -30,7 +30,7 @@ nav:
                - Setting up SLAAC (hosts): slaac/slaac.md
          - CRXN DNS: dns/dns.md
    - Additional:
-      - On-the-go: onthego.md
+      - On-the-go CRXN: onthego.md
    - Peers: peers.md
    - Services: services.md
    - People: people/people.md
