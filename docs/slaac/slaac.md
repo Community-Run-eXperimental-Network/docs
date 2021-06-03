@@ -31,7 +31,7 @@ Once you have configured that, then hit save and close all those windows:
 
 What you want to do now is to open `nmtui` (in your terminal) and reactivate that connection, first go to _Activate a connection_:
 
-![]()
+![](slaac/nmtui_main_menu.png)
 
 Now reactivate the connection. You can do this by deactivating it and activating it again (unplugging and replugging won't reactivate it - it doesn't reload the profile).
 
