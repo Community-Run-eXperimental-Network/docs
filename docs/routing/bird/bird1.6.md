@@ -63,11 +63,6 @@ filter crxn6
         then
                 accept;
 
-		# Freeloader's range
-        if (rangeCheck(net, 2a04:5b81:2050::/44) = true)
-        then
-                accept;
-
         # No matches, reject
         reject;
 }
