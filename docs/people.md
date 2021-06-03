@@ -9,5 +9,8 @@ Get to know some familiar faces!
 
 Creator of CRXN.
 
+Roles: EntityDB, Documentation, Outreach, Network services
+
 E-mail: `deavmi@redxen.eu`
-BNET IRC: `deavmi`
+BNET IRC: `deavmi` (preferred)
+Matrix: `deavmi@matrix.org`
