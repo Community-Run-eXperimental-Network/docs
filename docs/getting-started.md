@@ -20,9 +20,7 @@ and configuration details needed to get connected!
 3. Registration
 	* [Registering a new /48 ULA](register_ula.md)
 	* [Adding your prefix to EntityDB](entitydb.md)
-	* ~TODO: IPs etc~~
-	* ~TODO: RPKI?~
-4. [Setting up routing](routing.md)
+4. Setting up routing
 	1. Setting up Bird
 		1. [Bird basics](bird_basics.md)
 		2. Bird configuration
@@ -31,20 +29,18 @@ and configuration details needed to get connected!
 		3. Setting up lg_proxy
 			* TODO: Setting up lg_proxy
 	2. Setting up Mikrotik
-		* TODO: Enabling graphs
-5. General moniroting
-	* TOD: Like making your node have yggdrasil just for the sake of it?
-6. Tunneling
+		* TODO: Add tutorial
+5. General monitoring
+	* TODO: Optional, not required and tutorial does not exist yet
+6. [Tunneling](tunneling.md) TODO: Finish this
 	* TODO: Setup tunnel(s)
 	* TODO: Fastd config
-7. Getting peers
-	* TODO: Finding someone to tunnel to
-8. Setting up your home network
+7. Setting up your home network
 	* [Configuring your hosts]
 		1. Statically (TODO)
 		2. Automatically with SLAAC and radv
 			1. [Setting up radv (router)](radv.md)
-			2. Setting up SLAAC (hosts)
+			2. [Setting up SLAAC (hosts)](slaac/slaac.md)
 	* TODO: COnfiguring hosts
 	* TODO: Dns
 
