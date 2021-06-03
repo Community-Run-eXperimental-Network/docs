@@ -2,15 +2,14 @@ site_name: CRXN
 theme: readthedocs
 
 nav:
-  - Home: index.md
-  - Getting started:
+   - Home: index.md
+   - Getting started:
       - Guide: getting-started.md
       - Rules: rules.md
       - Requirements: requirements.md
       - Registration:
          - Registering a new /48 ULA: register_ula.md
          - Adding your prefix to EntityDB: entitydb.md
-      - Assigning subnet: prefixes.md
       - Routing:
          - Setting up Bird:
             - Bird basics: bird_basics.md
@@ -20,13 +19,8 @@ nav:
             - Protocols:
                - Babel: bird_babel.md
                - OSPFv3: bird_ospfv3.md
-  - Tutorial:
-      - Peering: peering.md
-      - CRXNv6: crxnv6.md
-      - On-the-go: onthego.md
-      - Configs:
-        - Bird: configs/bird.md
-  - Peers: peers.md
-  - Services: services.md
-  - Registrar: ipam.md
-  - People: peopel.md
+      - Additional:
+         - On-the-go: onthego.md
+   - Peers: peers.md
+   - Services: services.md
+   - People: people.md
