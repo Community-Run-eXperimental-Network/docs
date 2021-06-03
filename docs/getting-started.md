@@ -17,18 +17,18 @@ and configuration details needed to get connected!
 	* Zero-tolerance for breaking them
 2. [Requirements](requirements.md)
 	* TODO: Hardware, software, network connections
-3. Assigning subnet
+3. Registration
 	* [Registering a new /48 ULA](register_ula.md)
-	* TODO: IPs etc
-	* TODO: RPKI?
+	* [Adding your prefix to EntityDB](entitydb.md)
+	* ~TODO: IPs etc~~
+	* ~TODO: RPKI?~
 4. [Setting up routing](routing.md)
 	1. Setting up Bird
-		* [Bird 1.6](bird1.6.md)
-		* [Bird 2.0](bird2.md)
-		* TODO: Filtering etc
-		* TODO: Config
-		* TODO: Scripting
-		1. Setting up lg_proxy
+		1. [Bird basics](bird_basics.md)
+		2. Bird configuration
+			1. [Bird 1.6](bird1.6.md)
+			2. [Bird 2.0](bird2.md)
+		3. Setting up lg_proxy
 			* TODO: Setting up lg_proxy
 	2. Setting up Mikrotik
 		* TODO: Enabling graphs
@@ -39,8 +39,12 @@ and configuration details needed to get connected!
 	* TODO: Fastd config
 7. Getting peers
 	* TODO: Finding someone to tunnel to
-8. Setting up your home nwtwork
-	* TODO: radv etc.
+8. Setting up your home network
+	* [Configuring your hosts]
+		1. Statically (TODO)
+		2. Automatically with SLAAC and radv
+			1. [Setting up radv (router)](radv.md)
+			2. Setting up SLAAC (hosts)
 	* TODO: COnfiguring hosts
 	* TODO: Dns
 
