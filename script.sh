@@ -6,4 +6,4 @@ cd /home/pi/HDD/docs_src/crxn
 git pull
 
 # Build to the public directory
-mkdocs build -d ../../docs/crxn/site
+python3 -m mkdocs build -d ../../docs/crxn/site
