@@ -19,8 +19,18 @@ nav:
             - Protocols:
                - Babel: bird_babel.md
                - OSPFv3: bird_ospfv3.md
-      - Additional:
-         - On-the-go: onthego.md
+      - Tunneling:
+         - Fastd: fastd.md
+         - GRE: gre.md
+      - Setting up your home network:
+         - Configuring your hosts:
+            - Statically (TODO): static.md
+            - Automatically with SLAAC and radv:
+               - Setting up radv (router): radv.md
+               - Setting up SLAAC (hosts): slaac/slaac.md
+         - CRXN DNS: dns/dns.md
+   - Additional:
+      - On-the-go: onthego.md
    - Peers: peers.md
    - Services: services.md
    - People: people/people.md
