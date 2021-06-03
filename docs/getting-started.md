@@ -15,7 +15,6 @@ and configuration details needed to get connected!
 	* We have **few** but **strict** rules nonetheless
 	* Zero-tolerance for breaking them
 2. [Requirements](requirements.md)
-	* TODO: Hardware, software, network connections
 3. Registration
 	* [Registering a new /48 ULA](register_ula.md)
 	* [Adding your prefix to EntityDB](entitydb.md)
