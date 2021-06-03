@@ -30,7 +30,7 @@ and configuration details needed to get connected!
 5. Tunneling
 	* [Fastd tunneling](tunneling/fastd.md)
 6. Setting up your home network
-	* [Configuring your hosts]
+	* Configuring your hosts
 		1. Automatically with SLAAC and radv
 			1. [Setting up radv (router)](radv.md)
 			2. [Setting up SLAAC (hosts)](slaac/slaac.md)
