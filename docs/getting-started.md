@@ -20,16 +20,16 @@ and configuration details needed to get connected!
 	* [Adding your prefix to EntityDB](registration/entitydb.md)
 4. Setting up routing
 	1. Setting up Bird
-		1. [Bird basics](bird_basics.md)
+		1. [Bird basics](routing/bird/bird_basics.md)
 		2. Bird configuration
-			1. [Bird 1.6](bird1.6.md)
-			2. [Bird 2.0](bird2.md)
+			1. [Bird 1.6](routing/bird/bird1.6.md)
+			2. [Bird 2.0](routing/bird/bird2.md)
 			3. Protocols
-				1. [Babel](bird_babel.md)
-				2. [OSPFv3](bird_ospfv3.md)
-5. [Tunneling](tunneling.md) TODO: Finish this
-	* TODO: Setup tunnel(s)
-	* TODO: Fastd config
+				1. [Babel](routing/bird/bird_babel.md)
+				2. [OSPFv3](routing/bird/bird_ospfv3.md)
+5. Tunneling
+	* [Fastd tunneling](tunneling/fastd.md)
+	* [GRE tunneling](tunneling/gre.md)
 6. Setting up your home network
 	* [Configuring your hosts]
 		1. Statically (TODO)

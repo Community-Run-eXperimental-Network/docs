@@ -12,16 +12,16 @@ nav:
          - Adding your prefix to EntityDB: registration/entitydb.md
       - Routing:
          - Setting up Bird:
-            - Bird basics: bird_basics.md
+            - Bird basics: routing/bird/bird_basics.md
             - Bird configuration:
-               - Bird 1.6: bird1.6.md
-               - Bird 2: bird2.md
+               - Bird 1.6: routing/bird/bird1.6.md
+               - Bird 2: routing/bird/bird2.md
             - Protocols:
-               - Babel: bird_babel.md
-               - OSPFv3: bird_ospfv3.md
+               - Babel: routing/bird/bird_babel.md
+               - OSPFv3: routing/bird/bird_ospfv3.md
       - Tunneling:
          - Fastd: tunneling/fastd.md
-         - GRE: gre.md
+         - GRE: tunneling/gre.md
       - Setting up your home network:
          - Configuring your hosts:
             - Statically (TODO): static.md
