@@ -1,5 +1,5 @@
 site_name: CRXN
-theme: yeti
+theme: readthedocs
 
 nav:
   - Home: index.md
