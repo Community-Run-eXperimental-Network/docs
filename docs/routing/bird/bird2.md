@@ -30,8 +30,8 @@ All of these will be included in a file saved at `/etc/crxn/bird.conf` like so:
 ```
 router id <ipv4>;
 
-include "/etc/crxn/filters.conf";
 include "/etc/crxn/networks.conf";
+include "/etc/crxn/filters.conf";
 include "/etc/crxn/tables.conf";
 include "/etc/crxn/router.conf";
 include "/etc/crxn/protocols.conf";
