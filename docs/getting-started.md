@@ -29,11 +29,9 @@ and configuration details needed to get connected!
 				2. [OSPFv3](routing/bird/bird_ospfv3.md)
 5. Tunneling
 	* [Fastd tunneling](tunneling/fastd.md)
-	* [GRE tunneling](tunneling/gre.md)
 6. Setting up your home network
 	* [Configuring your hosts]
-		1. Statically (TODO)
-		2. Automatically with SLAAC and radv
+		1. Automatically with SLAAC and radv
 			1. [Setting up radv (router)](radv.md)
 			2. [Setting up SLAAC (hosts)](slaac/slaac.md)
 	* [CRXN DNS](dns/dns.md)
