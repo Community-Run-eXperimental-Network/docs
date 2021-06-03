@@ -23,4 +23,4 @@ nav:
          - On-the-go: onthego.md
    - Peers: peers.md
    - Services: services.md
-   - People: people.md
+   - People: people/people.md
