@@ -15,7 +15,7 @@ E-mail: `deavmi@redxen.eu`
 BNET IRC: `deavmi` (preferred)
 Matrix: `deavmi@matrix.org`
 
-## Rany `rany`
+## Rany `~rany`
 
 Adminstration and massive helping hand.
 
@@ -24,3 +24,12 @@ Roles: EntityDB, Network services
 E-mail: `ranycrxn@riseup.net`
 BNET IRC: `rany`
 Matrix: `@rany:fairydust.space`
+
+## Alex Denes `~caskd`
+
+European CRXN adminstration, runs the CRXN DNS root name server.
+
+Roles: Network services, CRXN DNS
+
+E-mail: `caskd@redxen.eu`
+BNET IRC: `caskd`
