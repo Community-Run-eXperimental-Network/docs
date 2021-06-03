@@ -128,6 +128,21 @@ protocol kernel crxnKernel {
 }
 ```
 
+#### `networks.conf`
+
+This is just something we normally add. Usually you would assign a `/64` within your ULA `/48` but you also want to claim the whole `/48` by advertising a blackhole for it. Here our `/48`/ULA is `fd40:ec65:5b4c::/48`.
+
+```
+protocol static crxnStatic
+{
+        # Advertise your /48 with a blackhole
+        route fd40:ec65:5b4c::/48 blackhole;
+
+        import filter crxn6;
+        table crxn;
+}
+```
+
 #### `protocols.conf`
 
 This file should look like this (as an example of running one `babel`
