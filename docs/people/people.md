@@ -7,6 +7,8 @@ Get to know some familiar faces!
 
 <img src="http://deavmi.assigned.network/profile_pic.jpg">
 
+<img src="people/deavmi.jpg">
+
 Creator of CRXN.
 
 Roles: EntityDB, Documentation, Outreach, Network services
@@ -17,6 +19,8 @@ Matrix: `deavmi@matrix.org`
 
 ## Rany `~rany`
 
+<img src="people/rany.png">
+
 Adminstration and massive helping hand.
 
 Roles: EntityDB, Network services
@@ -26,6 +30,8 @@ BNET IRC: `rany`
 Matrix: `@rany:fairydust.space`
 
 ## Alex Denes `~caskd`
+
+<img src="people/caskd.png">
 
 European CRXN adminstration, runs the CRXN DNS root name server.
 
