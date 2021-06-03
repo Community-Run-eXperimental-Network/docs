@@ -25,6 +25,20 @@ The configuration template is constructed out of the following files:
 	* Depending on what protocol you want to use this will contains
 	configurations for each
 
+All of these will be included in a file saved at `/etc/crxn/bird.conf` like so:
+
+```
+router id <ipv4>;
+
+include "/etc/crxn/filters.conf";
+include "/etc/crxn/networks.conf";
+include "/etc/crxn/tables.conf";
+include "/etc/crxn/router.conf";
+include "/etc/crxn/protocols.conf";
+```
+
+Remember to set a unique router ID in `<ipv4>`, make it anything - it doesn't have to even be an address you own.
+
 #### `filters.conf`
 
 This file holds all the required functions for subnet matching and also
