@@ -20,7 +20,7 @@ nav:
                - Babel: bird_babel.md
                - OSPFv3: bird_ospfv3.md
       - Tunneling:
-         - Fastd: fastd.md
+         - Fastd: tunneling/fastd.md
          - GRE: gre.md
       - Setting up your home network:
          - Configuring your hosts:
