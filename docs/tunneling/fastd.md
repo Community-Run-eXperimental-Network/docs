@@ -24,11 +24,12 @@ The next step is to setup a tunnel. You will have to contact someone to get the 
 2. `public key`
 	* You will need their public key which will be used to secure the connection to them such that traffic is encrypted (CRXN traffic and babeld router messages)
 
-Once we have this information we can begin the setup with the below as the template:
+Create a file with the template and instructions below in `/etc/fastd/crxn/fastd.conf`:
 
 ```
 # The interface that will connect to the virtual ethernet network fastd connects us to
-interface "<interfaceName>";
+interface "crxn%n";
+mode multitap;
 
 # The encryption method (don't change this unless you need to)
 method "salsa2012+umac";
@@ -42,19 +43,28 @@ secret "<secret key>";
 # Setup a peer to allow incoming connections from or initiate a connection too
 peer "<peerName>"
 {
-	remote <type> "<ip>" port <port>;
-	key "<peer's public key>";
+    remote <type> "<ip>" port <port>;
+    key "<peer's public key>";
 }
 
-# On interface rise run
-on up "ifconfig <interfaceName> up";
 ```
 
-So the above needs to have the following filled in:
+If your system uses ifconfig append
+```
+# On interface rise run
+on up "ifconfig $INTERFACE up";
+on down "ifconfig $INTERFACE down";
+```
 
-1. `"<interfaceName>"`
-	* This is of your choosing and will need to be remembered for later steps
-2. `<ip>` and `<port>`
+If your system uses ip append
+```
+on up "ip link set dev $INTERFACE up";
+on down "ip link set dev $INTERFACE down";
+```
+
+The template needs to have the following filled in:
+
+1. `<ip>` and `<port>`
 	* The IP address and port to bind to and listen on for incoming connections from your peer's daemon (if his daemon initiates the connection first)
 
 Now you must run the following:
@@ -65,14 +75,14 @@ fastd --generate-key
 
 Then save the *public key* and the *private key*. **Note:** You must give your peer your *public key*.
 
-3. `"<secret key>"`
+2. `"<secret key>"`
 	* This must be the *private key* you generated earlier
 
 
 Now we need to fill in the peer details of the node you are connecting to:
 
 1. `"<peerName>"`
-	* Set this to the name of the peer (can be anything really)
+	* Sets the interface name of the connection with the peer to crxn`<peerName>`
 2. `<type>`
 	* Set this to either `ipv4` or `ipv6` depending of the address being used to connect to the remote peer
 3. `"<ip>"`
@@ -89,7 +99,14 @@ The last thing to configure now is to rise the interface up when fastd starts (a
 You can then start the daemon as follows:
 
 ```
-sudo fastd -c /etc/fastd/path/to/config.conf
+sudo fastd -c /etc/fastd/crxn/fastd.conf
 ```
 
-**TODO: Sosytemd-unit**
+### Systemd unit
+
+Fastd can also be set up with systemd units.
+
+Run `systemctl start fastd@crxn` to bring up the tunnel
+Run `systemctl stop fastd@crxn` to bring down the tunnel
+
+To enable the systemd unit on startup run `systemctl enable fastd@crxn`

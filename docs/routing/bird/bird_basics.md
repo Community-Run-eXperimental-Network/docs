@@ -5,7 +5,7 @@ Basics
 
 Installation of bird is relatively simple, your distro should have a `bird` package.
 
-Versions 1.6 and 2.0 will both work, there are slight differences in the configuratio
+Versions 1.6 and 2.0 will both work, there are slight differences in the configuration
 however but those will be shown in the configuration section that follows.
 
 ## Enabling forwarding
@@ -36,7 +36,6 @@ TODO: Weird experience with me, only doing `all` made it work
 
 ## Assigning the /64
 
-Normally people will assign the a `/64` out of their `/48`. Assign this to the interface of the LAN you want your router on.
+Normally people will assign a `/64` out of their `/48`. Assign this to the interface of the LAN you want your router on.
 
-A good IP choice for the router would be either `xxxx::1` or `xxxx::` so people can easily guess what to ping to test reachability
-to your network.
+A good IP choice for the router would be either `xxxx::1` or `xxxx::` so people can easily guess what to ping to test reachability to your network.
