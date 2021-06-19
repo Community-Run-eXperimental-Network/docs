@@ -25,16 +25,21 @@ The configuration template is constructed out of the following files:
 	* Depending on what protocol you want to use this will contains
 	configurations for each
 
-All of these will be included in a file saved at `/etc/crxn/bird.conf` like so:
+All of these will be included in a file saved at `/etc/bird/bird.conf` like so:
 
 ```
 router id <ipv4>;
 
-include "/etc/crxn/networks.conf";
-include "/etc/crxn/filters.conf";
-include "/etc/crxn/tables.conf";
-include "/etc/crxn/router.conf";
-include "/etc/crxn/protocols.conf";
+include "/etc/bird/crxn/tables.conf";
+include "/etc/bird/crxn/filters.conf";
+include "/etc/bird/crxn/router.conf";
+include "/etc/bird/crxn/networks.conf";
+```
+
+Additionally, add the files for the route distribution protocol which we configure in the next steps.
+```
+include "/etc/bird/crxn/babel.conf"; # For babel routing
+include "/etc/bird/crxn/ospfv3.conf"; # For OSPFv3 routing
 ```
 
 Remember to set a unique router ID in `<ipv4>`, make it anything - it doesn't have to even be an address you own.
@@ -46,40 +51,10 @@ filters that match to the specific prefix aggregates (regional subnets)
 that CRXN uses.
 
 ```
-# Given prefix `in` and `check` see whether or not
-# the `in` is withint `check`
-function rangeCheck (prefix inPrefix; prefix rangePrefix)
-int ourNetworkLen;
-ip ourNetworkID;
-ip inPrefixMasked;
+filter crxnFilter
 {
-        # Get the length of our range
-        ourNetworkLen=rangePrefix.len;
-
-        # Get out network ID
-        ourNetworkID=rangePrefix.ip;
-
-        # Mask the inPrefix to that length
-        inPrefixMasked=inPrefix.ip.mask(ourNetworkLen);
-
-        # Check if the masks match
-        if(inPrefixMasked = ourNetworkID)
-        then
-                return true;
-        else
-                return false;
-}
-
-# CRXN Route filter based
-filter crxn6
-{
-	# CRXN v6 range
-        if (rangeCheck(net, fd00::/8) = true)
-        then
-                accept;
-
-        # No matches, reject
-        reject;
+    if (net ~ fd00::/8) then accept;
+    reject;
 }
 ```
 
@@ -111,33 +86,38 @@ doesn't even need those, it gets them from the interface.
 # address and prefix. So instead of reading this from all routes with `proto kernel` this just
 # yeets the routes off of the interface structure itself (even if you didn't have a route for your
 # directly attached networks - i.e. nexthop = 0.0.0.0)
-protocol direct crxnDirect {
-        ipv6
-        {
-                # Import from direct -> bird into bird's `crxn` table
-                import filter crxn6;
-                table crxn;
-        };
+protocol direct crxnDirect
+{
+    ipv6
+    {
+        table crxn;
+        import filter crxnFilter;
+    };
+    # Interfaces to find neighbours on
+    interface "eth*";
+}
+
+protocol device {
 }
 ```
 
-The second part is for syncing routes from Bird to the Linux kernels' routing
-table such that you can forward traffic then absed on the routes learnt from
-Bird.
+The second part is for syncing routes from Bird to the Linux kernel's routing
+table such that you can forward traffic based on the routes in Bird.
 
-TODO: Check, defualt `learn` should larn non `kernel` and non-`bird` routes
+TODO: Check, defualt `learn` should learn non `kernel` and non-`bird` routes
 
 ```
 # CRXN Kernel protocol
 # We import any routes from the kernel table other than `proto bird` and `proto kernel`,
 # could be `proto static` for example. By default it will learn these.
 # Of course we also then export all routes from our Bird tables into the kernel so you can actually forward packets
-protocol kernel crxnKernel {
-        ipv6 {
-        	# Export from bird -> kernel from bird's `crxn` table
-                export filter crxn6;
-                table crxn;
-        };
+protocol kernel crxnKernel
+{
+    ipv6 {
+        # bird's crxn table -> kernel
+        table crxn;
+        export filter crxnFilter;
+    };
 }
 ```
 
@@ -156,15 +136,4 @@ protocol static crxnStatic
                 table crxn;
         }
 }
-```
-
-#### `protocols.conf`
-
-This file should look like this (as an example of running one `babel`
-instance and one `ospf` instance):
-
-```
-# Import protocol instances
-import "babel.conf";
-import "ospf.conf";
 ```
