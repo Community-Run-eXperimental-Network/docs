@@ -65,10 +65,8 @@ protocol radv
 	        # Defaults are fine
 	    };
 
-	    # Normally it will distribute a default route, disable that (TODO: Check)
-	    prefix ::/0 {
-	      	skip yes;
-	    };
+		# Prevent advertising of default route
+		default lifetime 0;
 	};
 }
 ```
