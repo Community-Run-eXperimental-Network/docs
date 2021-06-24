@@ -107,3 +107,11 @@ the original babel routing software, _babeld_, here, on the [live router map](ht
 Does it sound interesting enough for you already? Want to get connected? Then head on over
 to our [Getting started] section where you can find all the guides you need in order to get connected,
 follow the rules and have fun!
+
+---
+
+## Important links
+
+* The CRXN homepage is: http://deavmi.assigned.network/projects/crxn
+* The **EntityDB** repository is: https://codeberg.org/CRXN/entitydb
+* This documentation is at: https://github.com/Community-Run-eXperimental-Network/docs

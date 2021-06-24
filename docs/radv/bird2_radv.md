@@ -1,17 +1,7 @@
 Radv
 ====
 
-Radv or _Router advertisements_ is a feature Bird offers that can allow you to add an additional configuration to your Bird router such that you
-can have it automatically configure your host devices on your CRXN /48 LAN such that they can access the LAN, the greater CRXN and also possibly
-configure [CRXN DNS](../dns) too!
-
-There are tutorials for both:
-
-1. [Bird 1.6](bird1.6_radv.md) (untested)
-2. [Bird 2.0](bird2_radv.md)
-
-
----
+This document is for setting up radv on Bird 2.0.
 
 # General syntax
 
@@ -20,7 +10,7 @@ You will want to add one of these to one of your Bird configuration files:
 ```
 protocol radv
 {
-    # Stuff hoes here
+    # Stuff goes here
 }
 ```
 
@@ -59,16 +49,26 @@ This will advertise all the routes your Bird router knows (those in the `crxn` t
 ```
 protocol radv
 {
-    # Advertise your prefix
-    prefix fd40:ec65:5b4c::/64 {
-        # TODO: Add anything that needs to be in here
-    };
+	# Enable propagating of routes exported to us via radv to hosts
+	propagate routes yes;
 
-    # Interfaces to run radv on
-    interface "eth0";
+	ipv6 {
+		# Export all your routes into the radv advertisement
+		export filter crxn6;
+		table crxn;
+	};
 
-    # Advertise all routes (TODO: check if this is the correct syntax)
-    propagate_routes yes;
-    table crxn;
+	# Interface to run radv on - only eth0 (change to what you want)
+	interface "eth0" {
+		# Advertise your prefix
+	    prefix fd40:ec65:5b4c::/64 {
+	        # Defaults are fine
+	    };
+
+	    # Normally it will distribute a default route, disable that (TODO: Check)
+	    prefix ::/0 {
+	      	skip yes;
+	    };
+	};
 }
 ```

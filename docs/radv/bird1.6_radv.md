@@ -1,17 +1,7 @@
 Radv
 ====
 
-Radv or _Router advertisements_ is a feature Bird offers that can allow you to add an additional configuration to your Bird router such that you
-can have it automatically configure your host devices on your CRXN /48 LAN such that they can access the LAN, the greater CRXN and also possibly
-configure [CRXN DNS](../dns) too!
-
-There are tutorials for both:
-
-1. [Bird 1.6](bird1.6_radv.md) (untested)
-2. [Bird 2.0](bird2_radv.md)
-
-
----
+This document is for setting up radv on Bird 1.6.
 
 # General syntax
 
@@ -20,7 +10,7 @@ You will want to add one of these to one of your Bird configuration files:
 ```
 protocol radv
 {
-    # Stuff hoes here
+    # Stuff goes here
 }
 ```
 
