@@ -49,16 +49,24 @@ This will advertise all the routes your Bird router knows (those in the `crxn` t
 ```
 protocol radv
 {
-    # Advertise your prefix
-    prefix fd40:ec65:5b4c::/64 {
-        # TODO: Add anything that needs to be in here
-    };
+	# Enable propagating of routes exported to us via radv to hosts
+	propagate routes yes;
 
-    # Interfaces to run radv on
-    interface "eth0";
+	# Export all your routes into the radv advertisement
+	export filter crxn6;
+	table crxn;
 
-    # Advertise all routes (TODO: check if this is the correct syntax)
-    propagate_routes yes;
-    table crxn;
+	# Interface to run radv on - only eth0 (change to what you want)
+	interface "eth0" {
+		# Advertise your prefix
+	    prefix fd40:ec65:5b4c::/64 {
+	        # Defaults are fine
+	    };
+
+	    # Normally it will distribute a default route, disable that (TODO: Check)
+	    prefix ::/0 {
+	      	skip yes;
+	    };
+	};
 }
 ```
