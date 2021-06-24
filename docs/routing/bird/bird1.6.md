@@ -5,9 +5,6 @@ This document aims to provide the configuration file template required
 for CRXN and along with a description of what parameters need to be set
 for your node specifically.
 
-**Note::** There are some bugs in the 1.6 version, we recommend you try the 2.0 version (as it
-is confirmed to work)
-
 ## Configuration
 
 The configuration template is constructed out of the following files:
