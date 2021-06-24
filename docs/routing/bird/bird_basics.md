@@ -29,7 +29,7 @@ adding an additional line to your `/etc/sysctl.conf` (which holds a bunch of
 these statements), it should look like this:
 
 ```bash
-sys.net.ipv6.conf.all.forwarding=1
+net.ipv6.conf.all.forwarding=1
 ```
 
 TODO: Weird experience with me, only doing `all` made it work
