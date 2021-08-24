@@ -154,15 +154,3 @@ protocol static crxnStatic
         table crxn;
 }
 ```
-
-#### `protocols.conf`
-
-This file should look like this (as an example of running one `babel`
-instance and one `ospf` instance):
-
-```
-# Import protocol instances
-import "babel.conf";
-import "ospf.conf";
-```
-
