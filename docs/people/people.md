@@ -39,3 +39,10 @@ Roles: Network services, CRXN DNS
 
 E-mail: `caskd@redxen.eu`
 BNET IRC: `caskd`
+
+## Chris IDK
+
+Amazing German dude.
+
+Roles; Network services, Routing
+BNET IRC: `chris2001`
