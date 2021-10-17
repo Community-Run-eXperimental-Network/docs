@@ -1,22 +1,83 @@
-CRXN On-the-go
-==============
+CRXN _on-the-go_
+================
 
-If you don't want to have to setup your **own router** or if you are away from a router itself and don't want to run one directly on your laptop and peer with someone then you can make use of someone else's router. A user, _caskd_, has made this possible. He provides IPv6-only and clearnet VPN tunneling over Wireguard - giving you access to all of IPv6 CRXN easily on Android, iOS or Linux, Mac OSX or Windows (any platform that Wireguard supports).
+## What is this?
 
-The configuration template is as follows:
+Deavmi runs a Wireguard tunneling service for client-only (meaning you won't route other's traffic) access to CRXN.
+
+The service is made available over the following networks:
+
+* Clearnet IPv6 (_Coming soon_)
+	* This means you can connect your Wireguard endpoint to an IPV6 host (my server)
+* Yggdrasil
+	* This means you can run the [Yggdrasil software](http://yggdrasil-network.github.io) and use an Yggdrasil IPv6 address as the Wireguard endpoint
+
+## Setup procedure
+
+### Generate the private key
+
+You need to generate a private-public key pair for your Wireguard instance.
 
 ```
-[Interface]
-PrivateKey=<private key>
-Address=<ipv4 address>/32, <ipv6 address>/128
-DNS=172.22.12.1
-
-[Peer]
-PublicKey=GJ8korU5yeAXpixMiaOohdRS4TSJ+Ag/5cLN1j6NMGA=
-AllowedIPs=0.0.0.0/0, ::/0
-Endpoint=168.119.99.213:51820
+wg genkey | sudo tee /etc/systemd/network/crxn0-private.key
+chmod 600 /etc/systemd/network/crxn0-private.key
 ```
 
-You just need to fill in your `<private key>`, `<ipv4 address>` and `<ipv6 address>`.
+### Fetch the public key
 
-Contact [caskd@redxen.eu](mailto:caskd@redxen.eu) to request a connection (remember to send a public key and also a reason (optional) for your connection).
+Get the public key from it (you will need to send that to deavmi):
+
+```
+sudo cat /etc/systemd/network/crxn0-private.key | wg pubkey
+```
+
+You can then send this to `deavmi` on [BNET](/projects/bonobonet) in the `#crxn` channel. You can also shoot him an email via `deavmi@redxen.eu`.
+
+### Configure a new wireguard device
+
+```
+sudo cat > /etc/systemd/network/crxn0.netdev <<EOF
+[NetDev]
+Name = crxn0
+Kind = wireguard
+Description = wg peering with crxn over yggdrasil
+
+[WireGuard]
+PrivateKeyFile = /etc/systemd/network/crxn0-private.key
+ListenPort = 51820
+
+[WireGuardPeer]
+PublicKey = e0zNJwCyP+sD5oiF0QAkzrM3rJpmg1NeGxEHVCfBClM=
+AllowedIPs = fd00::/8
+Endpoint = [301:754:2ca2:57f8::1]:51820
+EOF
+```
+
+### Create the crxn network configuration file
+
+```
+sudo cat > /etc/systemd/network/20-crxn0.network <<EOF
+[Match]
+Name=crxn0
+
+[Network]
+IPv6AcceptRA=false
+
+[Address]
+## Uncomment and change this to your IP address
+# Address=fdf1:1dc1:f54d:0001::1/64 # CHANGE THIS !!!!
+## Uncomment to route packets from another interface, ie eth0
+# AddPrefixRoute=false
+
+[Route]
+Destination=fd00::/8
+EOF
+```
+
+### Restart
+
+Restart the service to apply all changes
+
+```
+sudo systemctl restart systemd-networkd
+```
