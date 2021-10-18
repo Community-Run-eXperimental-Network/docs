@@ -9,8 +9,10 @@ The service is made available over the following networks:
 
 * Clearnet IPv6 (_Coming soon_)
 	* This means you can connect your Wireguard endpoint to an IPV6 host (my server)
+	* Endpoint address: `2a04:5b81:2010::65`
 * Yggdrasil
 	* This means you can run the [Yggdrasil software](http://yggdrasil-network.github.io) and use an Yggdrasil IPv6 address as the Wireguard endpoint
+	* Endpoint address: `301:754:2ca2:57f8::1`
 
 ## Setup procedure
 
@@ -49,6 +51,8 @@ ListenPort = 51820
 [WireGuardPeer]
 PublicKey = e0zNJwCyP+sD5oiF0QAkzrM3rJpmg1NeGxEHVCfBClM=
 AllowedIPs = fd00::/8
+
+# Depending on how you want to connect change the endpoint here (port remains constant)
 Endpoint = [301:754:2ca2:57f8::1]:51820
 EOF
 ```
