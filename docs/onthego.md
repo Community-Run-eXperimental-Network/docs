@@ -7,7 +7,7 @@ Deavmi runs a Wireguard tunneling service for client-only (meaning you won't rou
 
 The service is made available over the following networks:
 
-* Clearnet IPv6 (_Coming soon_)
+* Clearnet IPv6
 	* This means you can connect your Wireguard endpoint to an IPV6 host (my server)
 	* Endpoint address: `2a04:5b81:2010::65`
 * Yggdrasil
