@@ -99,6 +99,6 @@ follow the rules and have fun!
 
 ## Important links
 
-* The CRXN homepage is: http://deavmi.assigned.network/projects/crxn
-* The **EntityDB** repository is: https://codeberg.org/CRXN/entitydb
-* This documentation is at: https://github.com/Community-Run-eXperimental-Network/docs
+* The CRXN homepage is: [http://deavmi.assigned.network/projects/crxn](http://deavmi.assigned.network/projects/crxn)
+* The **EntityDB** repository is: [https://codeberg.org/CRXN/entitydb](https://codeberg.org/CRXN/entitydb)
+* This documentation is at: [https://github.com/Community-Run-eXperimental-Network/docs](https://github.com/Community-Run-eXperimental-Network/docs)
