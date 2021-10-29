@@ -67,6 +67,8 @@ mediums or routing daemon you choose to use is up to you - this falls in line wi
 
 A few details about the network.
 
+![CRXN babelweb map](map.png)
+
 ### Protocol support
 
 We only use IPv6 on CRXN because it has many features, such as link-local addresses, that make
@@ -83,22 +85,7 @@ The IPv6 range we use is the private range of `fd00::/8`.
 
 Users get allocated a `/48` (like `fdd2:cbf2:61bd::/48`) IPv6 ULA within the `fd00::/8` range (by definition).
 
-We have a Netbox [instance](https://crxn.chrisnew.de/netbox) where we register all the ULAs in.
-
-We also recommend you register your ULA on the global ULA registry at [ungleich](https://ula.ungleich.ch/).
-
-### The state of the network
-
-![CRXN babelweb map](map.png)
-
-The network is currently made up of around ~10 nodes so far with a few services running on
-the network, such as Mumble, [BonoboNET](/projects/bonobonet) (IRC), gaming (Xonotic, Minetest)
-and a few websites. We even have DNS which can resolve `.crxn` domains (find out more about that here (TODO).)
-
-You can see the looking glass here (TODO).
-
-You can also see a live map of the subset of users who are only running
-the original babel routing software, _babeld_, here, on the [live router map](http://deavmi.assigned.network:4444).
+We keep track of allocations on a Git-based repository caled [_EntityDB_](https://codeberg.org/CRXN/entitydb).
 
 ## Getting started
 
