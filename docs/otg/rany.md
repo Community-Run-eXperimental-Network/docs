@@ -27,5 +27,6 @@ MTU = 1280
 PublicKey = $serverpubkey
 AllowedIPs = fd00::/8
 Endpoint = $serveraddr
+PersistentKeepalive = 25
 EOF
 ```
