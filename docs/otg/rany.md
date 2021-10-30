@@ -15,7 +15,7 @@ ret=$(curl -s "-Fpubkey=$pubkey" rany1.duckdns.org:5000)
 
 myaddr=$(printf %s "$ret" | jq -rc .client_address)
 serveraddr=$(printf %s "$ret" | jq  -rc .server_address)
-serverpubkey=$(printf %s "$ret" | jq -rc .server_pubkey)
+serverpubkey="CPOuiTlyE/+C/+3iZOv7XrjPEpwl0MFlbTN4nUrQkRo="
 
 cat <<EOF
 [Interface]
