@@ -1,17 +1,8 @@
 CRXN DNS
 ========
 
-The CRXN root nameserver is: `` (TODO: @caskd)
+We did have a DNS root server run by Alex Denes (@caskd) at one stage but he isn't connected to CRXN at this stage anymore - he probably will run it again sometime in the future again.
 
-## Automatic configuration via Radv and SLAAC
+In the meantime we currently have the following DNS providers:
 
-You can setup CRXN DNS easily in Radv by adding a line to your Radv daemon, like Bird's, like this:
-
-```
-#TODO: Make sure this is correct
-rdnss {}
-```
-
-## Manual configuration
-
-TODO:
+1. None
