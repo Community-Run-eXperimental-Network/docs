@@ -11,4 +11,4 @@ In terms of hardware there is not really any constraint - you can run a node on 
 
 ### Bandwidth
 
-Your network should be able to handle relatively high throughput. We recommend 50mbit up/down as a bare minimum, currently we don't push high throughput data through our networks but the room for growth is better to have than not.
+Your network should be able to handle relatively high throughput. We recommend 50MBit up/down as a bare minimum, currently we don't push high throughput data through our networks but the room for growth is better to have than not.
