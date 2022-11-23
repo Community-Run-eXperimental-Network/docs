@@ -8,7 +8,6 @@ nav:
       - Rules: rules.md
       - Requirements: requirements.md
       - Registration:
-         - Registering a new /48 ULA: registration/register_ula.md
          - Adding your prefix to EntityDB: registration/entitydb.md
       - Routing:
          - Setting up Bird:

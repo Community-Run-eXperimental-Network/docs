@@ -1,6 +1,8 @@
 CRXN DNS
 ========
 
+![](dns.jpg)
+
 **CRXN DNS** offers users the ability to map their CRXN IP address to human-readable names to make life easier.
 The way DNS is managed on CRXN is via the [RecordDB](http://codeberg.org/CRXN/zones/src/branch/master/all) whereby
 you make a pull request to add your entries and it gets approved by one of the network administrators. The time for

@@ -16,7 +16,6 @@ and configuration details needed to get connected!
 	* Zero-tolerance for breaking them
 2. [Requirements](requirements.md)
 3. Registration
-	* [Registering a new /48 ULA](registration/register_ula.md)
 	* [Adding your prefix to EntityDB](registration/entitydb.md)
 4. Setting up routing
 	1. Setting up Bird
