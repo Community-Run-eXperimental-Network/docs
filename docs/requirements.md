@@ -1,14 +1,14 @@
 Requirements
 ============
 
-This document aims to provide the required hardware, software and network
-requirements to run a node on the CRXN inter-network.
+This document aims to provide a rough ideas of the requirements for joining CRXN.
 
 ## Hardware
 
-Hardware wise you can use anything to be quite honest. We always suggest
-something that can run free software such as Linux and also, more so,
-free hardware
+In terms of hardware there is not really any constraint - you can run a node on whatever hardware you like. If anything, we advocate for a diversity of hardware use as it allows the software used such as `bird`, `fastd` etc. to be tested in a multitude of different ways within the domain of networking.
 
+**However**, please do not use hardware that is extremely slow in terms of CPU performance. Routing still takes some CPU time and it needs to be relatively fast. Most hardware won't be as slow as what we are describing here but some can be.
 
-TODO: FInish me
+### Bandwidth
+
+Your network should be able to handle relatively high throughput. We recommend 50mbit up/down as a bare minimum, currently we don't push high throughput data through our networks but the room for growth is better to have than not.
