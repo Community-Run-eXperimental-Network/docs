@@ -8,7 +8,7 @@ nav:
       - Rules: rules.md
       - Requirements: requirements.md
       - Registration:
-         - Adding your prefix to EntityDB: registration/entitydb.md
+         - Registering and adding your prefix to EntityDB: registration/entitydb.md
       - Routing:
          - Setting up Bird:
             - Bird basics: routing/bird/bird_basics.md
