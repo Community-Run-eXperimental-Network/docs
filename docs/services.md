@@ -1,8 +1,16 @@
 Services
 ========
 
-This is a public directory of all known public services made available through the CRXN inter-network. Any domains listed here need resolution via the root server specified in the section below.
+This is a public directory of all known public services made available through the CRXN inter-network.
 
-For a list of services please check [here]()
+## Mumble servers
 
-**TODO:** Update htis
+TODO
+
+## Websites
+
+* [Deavmi's personal homepage](http://[fdd2:cbf2:61bd::2]/)
+    - Deavmi's personal homepage and blog
+    - IPv6: `fdd2:cbf2:61bd::2`
+    - Port: `80`
+    - DNS: `web.home.deavm.crxn`
