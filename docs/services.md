@@ -18,3 +18,7 @@ TODO
     - Skiqqy's personal homepage
     - IPv6: `fdd4:975c:1440::1`
     - Port: `81`
+* [Skiqqy's blog](http://[fdd4:975c:1440::1]:82/)
+    - Skiqqy's blog
+    - IPv6: `fdd4:975c:1440::1`
+    - Port: `82`
