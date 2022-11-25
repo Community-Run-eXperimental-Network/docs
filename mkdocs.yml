@@ -9,6 +9,7 @@ nav:
       - Requirements: requirements.md
       - Registration:
          - Registering and adding your prefix to EntityDB: registration/entitydb.md
+      - Network configuration: network/setup.md
       - Routing:
          - Setting up Bird:
             - Bird basics: routing/bird/bird_basics.md
@@ -26,6 +27,7 @@ nav:
                - Setting up radv (router): radv.md
                - Setting up SLAAC (hosts): slaac/slaac.md
          - CRXN DNS: dns/dns.md
+      - Using the network: usage/
    - Additional:
       - On-the-go CRXN:
          - What is it?: otg/index.md
