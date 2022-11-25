@@ -14,3 +14,7 @@ TODO
     - IPv6: `fdd2:cbf2:61bd::2`
     - Port: `80`
     - DNS: `web.home.deavm.crxn`
+* [Skiqqy's personal homepage](http://[fdd4:975c:1440::1]:81/)
+    - Skiqqy's personal homepage
+    - IPv6: `fdd4:975c:1440::1`
+    - Port: `81`
