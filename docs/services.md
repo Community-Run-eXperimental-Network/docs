@@ -19,6 +19,10 @@ TODO
     - IPv6: `fdd4:975c:1440::1`
     - Port: `81`
 * [Skiqqy's blog](http://[fdd4:975c:1440::1]:82/)
-    - Skiqqy's blog
+    - A personal blog of a developer
     - IPv6: `fdd4:975c:1440::1`
     - Port: `82`
+* Deavmi's MumbleShack
+    - A VOIP-based chat server
+    - IPv6: `fd08:8441:e254::5`
+    - Port: `64738`
