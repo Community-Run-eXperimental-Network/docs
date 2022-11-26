@@ -5,7 +5,14 @@ This is a public directory of all known public services made available through t
 
 ## Mumble servers
 
-TODO
+Mumble provides VOIP-based telephony in a fashion similar to that of teamSpeak but open-source.
+
+* Deavmi's MumbleShack
+    - IPv6: `fd08:8441:e254::5`
+    - Port: `64738`
+* Tyre0x's Mumble
+    - IPv6: `fda7:3ae7:e04d::1`
+    - Port: `64738`
 
 ## Websites
 
@@ -22,7 +29,3 @@ TODO
     - A personal blog of a developer
     - IPv6: `fdd4:975c:1440::1`
     - Port: `82`
-* Deavmi's MumbleShack
-    - A VOIP-based chat server
-    - IPv6: `fd08:8441:e254::5`
-    - Port: `64738`
