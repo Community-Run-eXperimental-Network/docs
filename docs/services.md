@@ -5,7 +5,7 @@ This is a public directory of all known public services made available through t
 
 ## Mumble servers
 
-Mumble provides VOIP-based telephony in a fashion similar to that of teamSpeak but open-source.
+Mumble provides VOIP-based telephony in a fashion similar to that of TeamSpeak but open-source.
 
 * Deavmi's MumbleShack
     - IPv6: `fd08:8441:e254::5`
