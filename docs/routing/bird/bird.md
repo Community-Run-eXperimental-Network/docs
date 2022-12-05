@@ -36,7 +36,12 @@ This will ensure that the routing daemon starts on boot.
 
 ## Configuration
 
-TODO: Mention what configuration files we will be editing
+In this section we will be configuring two files:
+
+1. `bird.conf`
+    * For general BIRD configuration e.g. _router IDs_, _device protocol_ and _includes_
+2. `crxn.conf`
+    * For CRXN-specific details
 
 ### Basics
 
@@ -55,6 +60,10 @@ router id 1.1.1.1;
 TODO: These need to be unique - check how much this applies etc
 
 These router IDs are required to be unique as they are used in the various protocols that BIRD supports in order to determine where a route advertisement came from - see them as a unique identifier of your BIRD router. Failing to do so will cause issues when routing on CRXN **and** a banning (TODO: see how we can enforce this).
+
+### CRXN-specific setup
+
+TODO: Do this
 
 ### Tables
 
