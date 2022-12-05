@@ -37,10 +37,4 @@ and configuration details needed to get connected!
 
 ## What's next?
 
-Once you're connected, what's there todo?
-
-1. Viewing the bird monitor
-	* TODO: Add
-2. Services
-	* TODO: Gaming, IRC etc.
-	* TODO: Using netbox to add your own and find more
+Once you're connected there are various things you can do on the network, take a look at [some of he things](services/) you can do.
