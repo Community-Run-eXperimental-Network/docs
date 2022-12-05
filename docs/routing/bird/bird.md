@@ -24,6 +24,12 @@ can use:
 
 ```bash
 sudo apt install bird2 -y
-``` 
+```
 
-You can confirm that the version of BIRD you installed is version 2 with the command `bird -v`.
+You can confirm that the version of BIRD you installed is version 2 with the command `bird -v`. If that shows the correct version number then continue to the next step:
+
+```bash
+sudo systemctl enable --now bird
+```
+
+This will ensure that the routing daemon starts on boot.
