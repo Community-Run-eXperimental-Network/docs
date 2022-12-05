@@ -58,7 +58,7 @@ Roles: Network services, CRXN x DN42 maintnence, Support
 E-mail: `ty3r0x@chaox.ro`
 BNET IRC: `ty3r0x`
 
-# Marek Küthe `~mark22k`
+## Marek Küthe `~mark22k`
 
 > The hero of CRXN
 
