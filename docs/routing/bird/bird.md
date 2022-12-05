@@ -54,6 +54,8 @@ router id 1.1.1.1;
 
 TODO: These need to be unique - check how much this applies etc
 
+These router IDs are required to be unique as they are used in the various protocols that BIRD supports in order to determine where a route advertisement came from - see them as a unique identifier of your BIRD router. Failing to do so will cause issues when routing on CRXN **and** a banning (TODO: see how we can enforce this).
+
 ### Tables
 
 We need to define the routing tables that BIRD will use in its process to store the routes that we want to learn from other routers and also advertise. Such a definition looks as follows:
