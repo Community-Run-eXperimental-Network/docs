@@ -12,7 +12,6 @@ nav:
       - Network configuration: network/setup.md
       - Routing:
          - Setting up Bird: routing/bird/bird.md
-            - Bird configuration: 
       - Tunneling:
          - Fastd: tunneling/fastd.md
       - Setting up your home network:
