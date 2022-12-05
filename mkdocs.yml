@@ -11,14 +11,9 @@ nav:
          - Registering and adding your prefix to EntityDB: registration/entitydb.md
       - Network configuration: network/setup.md
       - Routing:
-         - Setting up Bird:
-            - Bird basics: routing/bird/bird_basics.md
-            - Bird configuration:
-               - Bird 1.6: routing/bird/bird1.6.md
-               - Bird 2: routing/bird/bird2.md
-            - Protocols:
-               - Babel: routing/bird/bird_babel.md
-               - OSPFv3: routing/bird/bird_ospfv3.md
+         - IPV6 Forwarding: routing/bird/forwarding.md
+         - Setting up Bird: routing/bird/bird.md
+            - Bird configuration: 
       - Tunneling:
          - Fastd: tunneling/fastd.md
       - Setting up your home network:
