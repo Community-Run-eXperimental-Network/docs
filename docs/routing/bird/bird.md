@@ -38,6 +38,22 @@ This will ensure that the routing daemon starts on boot.
 
 TODO: Mention what configuration files we will be editing
 
+### Basics
+
+There are some basic definition that we are required to add to our configuration file. BIRD is normally configured to use the base configuration stored at something like `/etc/bird/bird.conf` or `/etc/bird.conf`, so open that file up and add the following to it.
+
+#### Router ID
+
+Every BIRD daemon is required to have what is known as a router ID which is written in the form of an IPv4 address. Now this does not actually need to be a valid IPv4 address in the sense of one you actually use but rather it just needs to follow the format, hence a router ID such as `1.1.1.1` is fine, despite you not "owning it".
+
+Define the router ID as the first line in the configuration file like so:
+
+```
+router id 1.1.1.1;
+```
+
+TODO: These need to be unique - check how much this applies etc
+
 ### Tables
 
 We need to define the routing tables that BIRD will use in its process to store the routes that we want to learn from other routers and also advertise. Such a definition looks as follows:
