@@ -46,3 +46,23 @@ Amazing German dude.
 
 Roles; Network services, Routing
 BNET IRC: `chris2001`
+
+## Ty3r0X `~ty3r0x`
+
+> Follow The Eye!
+Owner of Chaox, responsible for CRXN x DN42 interconnection
+
+Roles: Network services, CRXN x DN42 maintnence, Support
+
+E-mail: `ty3r0x@chaox.ro`
+BNET IRC: `ty3r0x`
+
+# Marek Küthe `~mark22k`
+
+> The hero of CRXN
+Owner of Bandura Communications, responsible for CRXN x DN42 interconnection, BGP master
+
+Roles: Network Services, CRXN DNS, CRXN x DN42 maintnance, Scripting & Programming
+
+Email: `crxn@mk16.de`
+Hackint IRC: `mark22k`
