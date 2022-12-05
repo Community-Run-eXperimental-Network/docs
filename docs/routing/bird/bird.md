@@ -15,3 +15,15 @@ You can use Bird 1.6 but you are on your own then in terms of configuration, the
 differs slightly but we recommend (and for the rest of this document we will be) using
 Bird 2 as it comes with many bug fixes and improvements and most distributions (including Debian)
 now have support for it.
+
+## Installation
+
+In order to install the BIRD daemon on your machine you should look for a package named `bird2` or something
+similar (some repositories name it slightly differently - such as _just_ `bird`). On a Debian-based system you
+can use:
+
+```bash
+sudo apt install bird2 -y
+``` 
+
+You can confirm that the version of BIRD you installed is version 2 with the command `bird -v`.
