@@ -36,6 +36,24 @@ This will ensure that the routing daemon starts on boot.
 
 ## Configuration
 
+TODO: Mention what configuration files we will be editing
+
+### Tables
+
+We need to define the routing tables that BIRD will use in its process to store the routes that we want to learn from other routers and also advertise. Such a definition looks as follows:
+
+```
+# Define the IPv6 BIRD table
+ipv6 table crxn;
+```
+
+You can choose any name for the table you want but you will just need to remember it such that you can refer to it later when it is needed.
+
+---
+
+Old stuff below WIP):
+
+
 TODO: Re-do this sections
 
 The configuration template is constructed out of the following files:
