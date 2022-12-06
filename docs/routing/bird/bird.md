@@ -76,6 +76,20 @@ ipv6 table crxn;
 
 You can choose any name for the table you want but you will just need to remember it such that you can refer to it later when it is needed.
 
+### Filters
+
+We need to define a filter which will be used to filter out any incorrect routes we want to advertise _to_ the network but also prevents any incorrect routes that are being propagated _from_ any misconfigured BIRD instances on the network:
+
+```
+filter crxnFilter
+{
+    if (net ~ fd00::/8) then accept;
+    reject;
+}
+```
+
+TODO: Add a check about not installing RTD_UNREACHABLEs which babel will generate sometimes and which BIRD reportedly has undefined behaviour with
+
 ---
 
 Old stuff below WIP):
